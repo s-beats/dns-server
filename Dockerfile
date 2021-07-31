@@ -1,10 +1,10 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk update && \
-    apk upgrade && \
-    apk --no-cache add bash
+RUN apt update && \
+    apt -y upgrade \
+    apt-get install dnsmasq
 
-RUN apk --no-cache add dnsmasq
+# RUN ap --no-cache add dnsmasq
 
 # EXPOSE 53 53/udp
 
